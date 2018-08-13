@@ -29,7 +29,12 @@ class PurchaseView extends Component{
     }
     render(){
         return(
-            <div></div>
+            <div>
+              <MainMenu />
+              {this.products}
+              console.log("This is the purchase view!")
+
+            </div>
         )
     }
 }
