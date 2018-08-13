@@ -135,7 +135,33 @@ const ProductsJson = {
         }   
     }
 
-   ]
+   ],
+
+   upcoming: [{
+        id: 1,
+        title: "Countersun Sunscreen",
+        img: require("../../Assets/products/upcoming-img/sunscreen.png")
+   },
+   {
+        id: 2,
+        title: "Sur La Table Green Pan",
+        img: require("../../Assets/products/upcoming-img/pan.png")
+   },
+   {
+        id: 3,
+        title: "GoopGlow Superpowder",
+        img: require("../../Assets/products/upcoming-img/powder.png")
+   },
+   {
+        id: 4,
+        title: "MNDFL Meditation Package",
+        img: require("../../Assets/products/upcoming-img/mat.png")
+   },
+   {
+        id: 6,
+        title: "Thistle Plant-Based Meals",
+        img: require("../../Assets/products/upcoming-img/bowl.png")
+   }]
 }
 
 export default ProductsJson;
