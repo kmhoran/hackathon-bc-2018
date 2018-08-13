@@ -5,6 +5,7 @@ import MainMenu from '../Shared/MainMenu';
 import ProductsJson from '../Shared/ProductsJson'
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import { Link } from 'react-router-dom';
 import FeedTile from './FeedTile';
 
 
@@ -54,7 +55,11 @@ class Shop extends React.Component{
                         <Grid container className={classes.demo} justify="center" spacing={Number(spacing)}>
                             {this.state.items.products.map(value => (
                                 <Grid key={value} item>
-                                    <Paper className={classes.paper}><img src={value.img} width='auto' height='80%'/></Paper>
+                                    <Paper className={classes.paper}>
+                                        <Link to='/purchaseView'>
+                                            <img src={value.img} width='auto' height='80%'/>
+                                        </Link>
+                                    </Paper>
                                 </Grid>
                             ))}
                         </Grid>
