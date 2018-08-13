@@ -1,3 +1,14 @@
+.grid-list-feed{
+    padding-top: 1em;
+    display: flex;
+}
+
+
+.feed-tile-frame{
+    border: 1px solid red;
+    margin: auto;
+}
+
 .feed-tile-img{
     max-height: 20em;
   }
@@ -6,8 +17,40 @@
       max-width: 20em;
       overflow: hidden;
       text-align: center;
+      position: relative;
+      cursor: pointer;
+  }
+  .feed-tile-img-frame .feed-tile-icon{
+      position: absolute;
+      top: 80%;
+      left: 80%;
+      opacity: 0;
+      transition: opacity 0.3s;
+  }
+  .feed-tile-img-frame:hover .feed-tile-icon{
+      opacity: 1;
   }
 
 .feed-tile-icon{
-    color: #fafafa;
+    font-size: 1.7em;
+    color: #ffb3d9;
+}
+
+
+.feed-tile-frame .feed-tile-info{
+    text-align: left;
+    border: 1px solid green;
+    padding: 0.5em;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.feed-tile-frame:hover .feed-tile-info{
+    opacity: 1;
+}
+.tile-company{
+    font-size: 1em;
+}
+.tile-title{
+    font-size: 1.5em;
 }

@@ -5,6 +5,7 @@ import './App.css';
 import Feed from './Components/Feed/Feed';
 import Shop from './Components/Shop/Shop';
 import Upcoming from './Components/Upcoming/Upcoming';
+import ProductDetail from './Components/ProductDetail/ProductDetail';
 
 class App extends Component {
   provider = null;
@@ -25,6 +26,7 @@ class App extends Component {
             <Route exact path="/" component={Feed}/>
             <Route exact path="/shop" component={Shop} />
             <Route exact path="/upcoming" component={Upcoming} />
+            <Route exact path="/detail/:id" component={Detail} />
           </div>
           {/* /.routes */}
         </div>
@@ -33,5 +35,10 @@ class App extends Component {
     );
   }
 }
+
+
+const Detail = ({ match }) => (
+  <ProductDetail id={match.params.id} />
+);
 
 export default App;
