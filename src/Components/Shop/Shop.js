@@ -8,6 +8,7 @@ import Paper from '@material-ui/core/Paper';
 import { Link } from 'react-router-dom';
 import FeedTile from './FeedTile';
 
+import './ShopStyle.css';
 
 const styles = theme => ({
     root: {
@@ -55,11 +56,13 @@ class Shop extends React.Component{
                         <Grid container className={classes.demo} justify="center" spacing={Number(spacing)}>
                             {this.state.items.products.map(value => (
                                 <Grid key={value} item>
-                                    <Paper className={classes.paper}>
+                                    <div className="paper-frame">
+                                    <Paper className="shop-paper">
                                         <Link to='/purchaseView'>
-                                            <img src={value.img} width='auto' height='80%'/>
+                                            <img  className="paper-img" src={value.img} width='auto' height='80%'/>
                                         </Link>
                                     </Paper>
+                                    </div>
                                 </Grid>
                             ))}
                         </Grid>
