@@ -1,0 +1,13 @@
+.feed-tile-img{
+    max-height: 20em;
+  }
+
+  .feed-tile-img-frame{
+      max-width: 20em;
+      overflow: hidden;
+      text-align: center;
+  }
+
+.feed-tile-icon{
+    color: #fafafa;
+}
