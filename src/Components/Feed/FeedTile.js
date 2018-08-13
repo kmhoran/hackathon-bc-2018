@@ -12,76 +12,60 @@ import './FeedStyles.css';
 
 const styles = theme => ({
     icon: {
-      color: 'rgba(255, 255, 255, 0.54)',
+        color: 'rgba(255, 255, 255, 0.54)',
     },
-    imgFullHeight:{
+    imgFullHeight: {
         height: 5
     }
-  });
+});
 
 
-class FeedTile extends React.Component{
+class FeedTile extends React.Component {
 
-    state ={
-        isFavorite:false,
+    state = {
+        isFavorite: false,
         isHover: false
     };
 
     onFavorite = () => {
-        this.setState(prevSate =>({
+        this.setState(prevSate => ({
             isFavorite: !prevSate.isFavorite
         }));
     }
 
-    
-
-    onHover = () =>{
-        this.setState({isHover: true})
-    }
-
-    onUnhover = () => {
-        this.setState({isHover: false})
-    }
-
-    displayFavorite = () =>{
-        if(!this.state.isFavorite){
-            return(<i className="far fa-heart feed-tile-icon"></i>);
+    displayFavorite = () => {
+        if (!this.state.isFavorite) {
+            return (<i className="far fa-heart feed-tile-icon"></i>);
         } else {
-            return(<i className="fas fa-heart feed-tile-icon"></i>);
+            return (<i className="fas fa-heart feed-tile-icon"></i>);
         }
     }
 
-    displayIcon = () => {
-        if(this.state.isHover){
-            return(<GridListTileBar
-                classes={{
-                  root: this.props.classes.titleBar,
-                  title: this.props.classes.title,
-                }}
-                actionIcon={
-                  <IconButton onClick={this.onFavorite}>
-                  {this.displayFavorite()}
-                  </IconButton>
-                }/>)
-        }
-    }
 
-    render(){
+    render() {
         const { classes, tile } = this.props;
-        return(
-        <GridListTile key={tile.img}
-                      onMouseEnter={this.onHover}
-                      onMouseLeave={this.onUnhover}>
-                  <div className="feed-tile-img-frame">
-                  <img className="feed-tile-img" src={tile.img} alt={tile.title} />
-                  </div>
-                  {this.displayIcon()}
-                </GridListTile>)
+        return (
+            <div className="feed-tile-frame"
+                 onClick={this.onFavorite}>
+                <GridListTile className="feed-tile" key={tile.id}>
+                    <div className="feed-tile-img-frame">
+                        <img className="feed-tile-img" src={tile.img} alt={tile.title} />
+                        <div className="feed-tile-icon">
+                {this.displayFavorite()}
+                
+            </div>
+                    </div>
+                </GridListTile>
+                <div className='feed-tile-info'>
+                  <div className='tile-company'>{tile.company}</div>
+                   <div className='tile-title'>{tile.title}</div>
+                </div>
+            </div>)
     }
 }
 
 FeedTile.propTypes = {
     classes: PropTypes.object.isRequired,
-  };
+};
 
-  export default withStyles(styles)(FeedTile);
+export default withStyles(styles)(FeedTile);

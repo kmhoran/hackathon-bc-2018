@@ -21,6 +21,9 @@ const styles = theme => ({
       justifyContent: 'space-around',
       overflow: 'hidden',
       backgroundColor: theme.palette.background.paper,
+      border: "1px solid blue",
+      display: "flex",
+      textAlign: "center"
     },
   });
 
@@ -48,14 +51,20 @@ class Feed extends React.Component {
     }
     
     products = () => {
+
+        console.log("from products: ", this.state.items);
+
         const {classes } = this.props;
-        return( <div className={classes.root}>
-            <GridList cellHeight={180} className={classes.gridList}>
-              {this.state.items.products.map(tile => (
-                  <FeedTile tile={tile} classes={classes}/>
-              ))}
-            </GridList>
-          </div>)
+        
+        if(this.state.items){
+            return( <div className={classes.root}>
+                <GridList cellHeight={180} className="grid-list-feed">
+                  {this.state.items.products.map(tile => (
+                    <FeedTile tile={tile} classes={classes}/>
+                  ))}
+                </GridList>
+              </div>)
+        }
     }
 
 
