@@ -40,6 +40,15 @@ class ProductDetail extends React.Component {
                         <div className="subtitle">$ {item.price}</div>
                         <Button className="action-button" variant="contained" color="primary">Notify Me</Button>
                     </div>
+                    <br/>
+                    <div className="blog">
+                        <div className="blog-title">
+                            {item.blog.title}
+                        </div>
+                        <div>
+                            {item.blog.content}
+                        </div>
+                    </div>
                 </div>);
         }
     }
