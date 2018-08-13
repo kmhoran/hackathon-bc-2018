@@ -12,18 +12,42 @@ class ProductDetail extends React.Component {
             error: null,
             isLoaded: false,
             id: props.id,
-            item: null
+            item: null,
+            isNotified: false
         }
     }
     componentDidMount() {
         const product = ProductsJson.products.find(e => {
-            return e.id == this.props.id;
+            if(e){
+                return e.id == this.props.id;
+            }
         });
         this.setState({
             isLoaded: true,
             item: product
 
         });
+    }
+
+    handleNotification = () => {
+        this.setState({
+            isNotified: true
+        });
+    }
+
+    displayButton = () => {
+        if(!this.state.isNotified){
+            return (<Button className="action-button" 
+                    variant="contained" 
+                    color="primary"
+                    onClick={this.handleNotification}>Notify Me</Button>)
+        } else{
+            return(<Button className="action-button" 
+                    variant="contained" 
+                    disabled
+                    color="primary">Notification Sent!</Button>)
+        }
+        
     }
 
     display = () => {
@@ -38,7 +62,7 @@ class ProductDetail extends React.Component {
                         <div className="detail-company">{item.company}</div>
                         <div className="detail-title">{item.title}</div>
                         <div className="subtitle">$ {item.price}</div>
-                        <Button className="action-button" variant="contained" color="primary">Notify Me</Button>
+                        {this.displayButton()}
                     </div>
                     <br/>
                     <div className="blog">
