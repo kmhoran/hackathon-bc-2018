@@ -5,7 +5,6 @@
 
 
 .feed-tile-frame{
-    border: 1px solid red;
     margin: auto;
 }
 
@@ -20,26 +19,44 @@
       position: relative;
       cursor: pointer;
   }
-  .feed-tile-img-frame .feed-tile-icon{
-      position: absolute;
-      top: 80%;
-      left: 80%;
+.tile-icons{
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    text-align: right;
+}
+  .feed-tile-img-frame .feed-tile-icon.active{
+    display: inline;
+    opacity: 1 !important;
+    
+}
+  .feed-tile-img-frame .feed-tile-icon.inactive{
+      display: inline;
       opacity: 0;
       transition: opacity 0.3s;
   }
-  .feed-tile-img-frame:hover .feed-tile-icon{
+  .feed-tile-img-frame:hover .feed-tile-icon.inactive{
+
       opacity: 1;
   }
+  
 
 .feed-tile-icon{
     font-size: 1.7em;
+    
+}
+
+.feed-tile-icon .social-icon{
+    color: #33ccff
+}
+
+.feed-tile-icon .favorite-icon{
     color: #ffb3d9;
 }
 
 
 .feed-tile-frame .feed-tile-info{
     text-align: left;
-    border: 1px solid green;
     padding: 0.5em;
     opacity: 0;
     transition: opacity 0.3s;

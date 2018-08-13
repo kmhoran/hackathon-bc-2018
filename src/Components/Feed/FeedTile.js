@@ -35,24 +35,39 @@ class FeedTile extends React.Component {
 
     displayFavorite = () => {
         if (!this.state.isFavorite) {
-            return (<i className="far fa-heart feed-tile-icon"></i>);
+            return (
+            <IconButton className="feed-tile-icon inactive"
+            onClick={this.onFavorite}>
+            <i className="far fa-heart favorite-icon"></i>
+            </IconButton>);
         } else {
-            return (<i className="fas fa-heart feed-tile-icon"></i>);
+            return (
+                <IconButton className="feed-tile-icon active"
+                onClick={this.onFavorite}>
+                <i className="fas fa-heart favorite-icon"></i>
+                </IconButton>);
         }
+    }
+
+    displaySocial = () => {
+        return (<IconButton className="feed-tile-icon inactive">
+           <i className="fas fa-share-alt social-icon"></i>
+        </IconButton>);
     }
 
 
     render() {
         const { classes, tile } = this.props;
         return (
-            <div className="feed-tile-frame"
-                 onClick={this.onFavorite}>
+            <div className="feed-tile-frame">
                 <GridListTile className="feed-tile" key={tile.id}>
                     <div className="feed-tile-img-frame">
                         <img className="feed-tile-img" src={tile.img} alt={tile.title} />
                         <div className="feed-tile-icon">
+                <div className="tile-icons">
+                {this.displaySocial()}
                 {this.displayFavorite()}
-                
+                </div>
             </div>
                     </div>
                 </GridListTile>

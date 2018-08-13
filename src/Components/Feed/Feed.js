@@ -21,7 +21,6 @@ const styles = theme => ({
       justifyContent: 'space-around',
       overflow: 'hidden',
       backgroundColor: theme.palette.background.paper,
-      border: "1px solid blue",
       display: "flex",
       textAlign: "center"
     },

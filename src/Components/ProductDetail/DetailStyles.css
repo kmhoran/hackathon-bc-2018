@@ -1,0 +1,35 @@
+.detail-image-frame{
+    height: 40em;
+    overflow: hidden;
+}
+
+.detail-main-image{
+  width: 100%;
+}
+.top-info{
+    position: relative;
+    top: 1em;
+}
+.detail-company{
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #888;
+}
+
+.detail-title{
+    font-size: 3em;
+    margin-bottom: 0.4em;
+}
+
+.subtitle{
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 2em;
+}
+
+@media (max-width: 700px) { 
+    .detail-main-image{
+        height: 100%;
+        width: 700px !important;
+    }
+ }

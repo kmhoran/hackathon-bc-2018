@@ -1,7 +1,11 @@
 import React from 'react';
-import ProductsJson from '../Shared/ProductsJson';
+import Button from '@material-ui/core/Button';
 
-class ProductDetail extends React.Component{
+import ProductsJson from '../Shared/ProductsJson';
+import './DetailStyles.css';
+import MainMenu from '../Shared/MainMenu';
+
+class ProductDetail extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -11,7 +15,7 @@ class ProductDetail extends React.Component{
             item: null
         }
     }
-    componentDidMount() {   
+    componentDidMount() {
         const product = ProductsJson.products.find(e => {
             return e.id == this.props.id;
         });
@@ -20,26 +24,43 @@ class ProductDetail extends React.Component{
             item: product
 
         });
-        console.log("products: ", ProductsJson.products);
-        console.log("id: ", this.props.id);
-        console.log("item: ", product);
     }
 
     display = () => {
-        if(this.state.item){
-        return (
-        <div>
-            <h1>Product Detail : {this.props.id}</h1>
-            <p>{this.state.item.title}</p>
-            </div>);
+        if (this.state.item) {
+            const { item } = this.state;
+            return (
+                <div>
+                    <div className="detail-image-frame">
+                        <img className='detail-main-image' src={item.img} />
+                    </div>
+                    <div className="top-info">
+                        <div className="detail-company">{item.company}</div>
+                        <div className="detail-title">{item.title}</div>
+                        <div className="subtitle">$ {item.price}</div>
+                        <Button className="action-button" variant="contained" color="primary">Notify Me</Button>
+                    </div>
+                </div>);
         }
     }
 
+
+    handleClick = (obj) => {
+        console.log(obj);
+    }
+
+    notify = (product) => {
+
+
+        return (<Button className="action-button" variant="contained" color="primary">Notify Me</Button>)
+    } 
+
     render() {
-        return(
-        <div>
-        {this.display()}
-        </div>);
+        return (
+            <div>
+                <MainMenu />
+                {this.display()}
+            </div>);
     }
 }
 
