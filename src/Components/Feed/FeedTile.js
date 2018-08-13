@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -55,6 +56,9 @@ class FeedTile extends React.Component {
         </IconButton>);
     }
 
+    handleImageClick = () => {
+        window.location.href=this.props.tile.url;
+    }
 
     render() {
         const { classes, tile } = this.props;
@@ -62,7 +66,9 @@ class FeedTile extends React.Component {
             <div className="feed-tile-frame">
                 <GridListTile className="feed-tile" key={tile.id}>
                     <div className="feed-tile-img-frame">
-                        <img className="feed-tile-img" src={tile.img} alt={tile.title} />
+                        <img className="feed-tile-img" 
+                             src={tile.img} alt={tile.title} 
+                             onClick={this.handleImageClick}/>
                         <div className="feed-tile-icon">
                 <div className="tile-icons">
                 {this.displaySocial()}
@@ -81,6 +87,8 @@ class FeedTile extends React.Component {
 
 FeedTile.propTypes = {
     classes: PropTypes.object.isRequired,
+    router: PropTypes.object
 };
 
-export default withStyles(styles)(FeedTile);
+
+export default withRouter(FeedTile);
