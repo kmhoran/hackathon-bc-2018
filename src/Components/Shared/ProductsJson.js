@@ -14,7 +14,24 @@ const ProductsJson = {
         id: 3,
         title: "fruit",
         img: require("../../Assets/products/fruit.jpg")   
+    },
+    {
+        id: 3,
+        title: "Overnight Resurfacing Peel",
+        img: require("../../Assets/products/overnightResurfacingPeel.jpg")   
+    },
+    {
+        id: 5,
+        title: "Lip Contioner Set",
+        img: require("../../Assets/products/lipContionerSet.jpg")   
+    },
+    {
+        id: 3,
+        title: "Countersun Mineral Sunscreen Mist",
+        img: require("../../Assets/products/countersunMineralSunscreenMist.jpg")   
     }
+
+
    ]
 }
 
