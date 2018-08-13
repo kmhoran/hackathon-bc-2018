@@ -45,15 +45,17 @@ class ProductDetail extends React.Component {
     }
 
 
-    handleClick = (obj) => {
-        console.log(obj);
-    }
+    // handleClick = (obj) => {
+    //     console.log(obj);
+    // }
 
-    notify = (product) => {
-
-
-        return (<Button className="action-button" variant="contained" color="primary">Notify Me</Button>)
-    } 
+    // notify = (product) => {
+    //     const han
+    //     return (<Button className="action-button" 
+    //                     variant="contained" 
+    //                     color="primary"
+    //                     onClick={}>Notify Me</Button>)
+    // } 
 
     render() {
         return (

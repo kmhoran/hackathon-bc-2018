@@ -6,6 +6,7 @@ import Feed from './Components/Feed/Feed';
 import Shop from './Components/Shop/Shop';
 import Upcoming from './Components/Upcoming/Upcoming';
 import ProductDetail from './Components/ProductDetail/ProductDetail';
+import PurchaseView from './Components/Shop/PurchaseView';
 
 class App extends Component {
   provider = null;
@@ -27,6 +28,7 @@ class App extends Component {
             <Route exact path="/shop" component={Shop} />
             <Route exact path="/upcoming" component={Upcoming} />
             <Route exact path="/detail/:id" component={Detail} />
+            <Route path="/purchaseView/:id" component={PurchaseView} />
           </div>
           {/* /.routes */}
         </div>
