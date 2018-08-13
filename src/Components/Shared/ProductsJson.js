@@ -6,7 +6,7 @@ const ProductsJson = {
             company: "Beautycounter",
             price: 28,
             title: "Mineral Sunscreen Mist",
-            img: require("../../Assets/products/countersunMineralSunscreenMist.jpg"),
+            img: require("../../Assets/products/countersunMineralSunscreenMist_1.jpg"),
             url: "/detail/0",
             blog:{
                 title: "Life isn’t as serious as you make it out to be.",
@@ -78,7 +78,7 @@ const ProductsJson = {
         company: "Beautycounter",
         price: 32,
         title: "CounterSun",
-        img: require("../../Assets/products/countersun.jpg"),
+        img: require("../../Assets/products/countersun_1.jpg"),
         url: "/detail/6",
         blog:{
             title: "Life isn’t as serious as you make it out to be.",
@@ -103,7 +103,7 @@ const ProductsJson = {
         company: "Beautycounter",
         price: 75,
         title: "GoopGlow",
-        img: require("../../Assets/products/goopglow.jpg"),
+        img: require("../../Assets/products/goopglow_1.jpg"),
         url: "/detail/8",
         blog:{
             title: "Life isn’t as serious as you make it out to be.",
