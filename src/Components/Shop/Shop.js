@@ -10,33 +10,33 @@ import FeedTile from './FeedTile';
 
 
 const styles = theme => ({
-    root: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'space-around',
-      overflow: 'hidden',
-      backgroundColor: theme.palette.background.paper,
-    },
-    paper: {
-        height: 140,
-        width: 200
-        }
-  });
+	root: {
+		display: 'flex',
+		flexWrap: 'wrap',
+		justifyContent: 'space-around',
+		overflow: 'hidden',
+		backgroundColor: theme.palette.background.paper,
+	},
+	paper: {
+		height: 140,
+		width: 200
+	}
+});
 
-class Shop extends React.Component{
+class Shop extends React.Component {
 
-	 constructor(props) {
-        super(props);
-        this.state = {
-            error: null,
-            isLoaded: false,
-            app: props.app,
-            items: null,
-            spacing: 16
-        }
-    }
+	constructor(props) {
+		super(props);
+		this.state = {
+			error: null,
+			isLoaded: false,
+			app: props.app,
+			items: null,
+			spacing: 16
+		}
+	}
 
-	componentDidMount(){
+	componentDidMount() {
 		this.setState({
 			items: ProductsJson
 		})
@@ -44,41 +44,40 @@ class Shop extends React.Component{
 	}
 
 	products = () => {
-        console.log("From products: ", this.state.items);
+		console.log("From products: ", this.state.items);
 
-        if (this.state.items){
-            const { spacing } = this.state;
-            const {classes} = this.props;
-            return(
-                <Grid container className={classes.root} spacing={16}>
-                    <Grid item xs={12}>
-                        <Grid container className={classes.demo} justify="center" spacing={Number(spacing)}>
-                            {this.state.items.products.map(value => (
-                                <Grid key={value} item>
-                                    <Paper className={classes.paper}>
-                                        <Link to='/purchaseView'>
-                                            <img src={value.img} width='auto' height='80%'/>
-                                        </Link>
-                                    </Paper>
-                                </Grid>
-                            ))}
-                        </Grid>
-                    </Grid>
-                </Grid>
-                )
-
-        }
+		if (this.state.items) {
+			const { spacing } = this.state;
+			const { classes } = this.props;
+			return (
+				<Grid container className={classes.root} spacing={16}>
+					<Grid item xs={12}>
+						<Grid container className={classes.demo} justify="center" spacing={Number(spacing)}>
+							{this.state.items.products.map(value => (
+								<Grid key={value} item>
+									<Paper className={classes.paper}>
+										<Link to={ value.url }>
+											<img src={value.img} width='auto' height='80%' />
+										</Link>
+									</Paper>
+								</Grid>
+							))}
+						</Grid>
+					</Grid>
+				</Grid>
+			);
+		}
 	}
-	render(){
+	render() {
 		return (
-				<div>
-					<MainMenu />
+			<div>
+				<MainMenu />
 
-					{this.products()}
-                </div>
+				{this.products()}
+			</div>
 		)
 	}
 }
 
 // export default Shop;
- export default withStyles(styles)(Shop);
+export default withStyles(styles)(Shop);

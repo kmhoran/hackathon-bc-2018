@@ -4,7 +4,8 @@ const ProductsJson = {
         {
             id: 0,
             company: "Beautycounter",
-            price: 125,
+			price: 125,
+			instock: true,
             title: "Mineral Sunscreen Mist",
             img: require("../../Assets/products/countersunMineralSunscreenMist.jpg"),
             url: "/detail/0",
@@ -17,7 +18,8 @@ const ProductsJson = {
         id: 1,
         title: "Lipstick",
         company: "Someone Else",
-        price: 125,
+			price: 125,
+        instock: true,
         img: require("../../Assets/products/cup.jpeg"),
         url: "/detail/1",
         blog:{
@@ -29,7 +31,8 @@ const ProductsJson = {
         id: 2,
         title: "jar",
         company: "Sur la Table",
-        price: 125,
+		price: 125,
+        instock: true,
         img: require("../../Assets/products/jar.jpg"),
         url: "/detail/2",
         blog:{
@@ -39,7 +42,9 @@ const ProductsJson = {
     },
     {
         id: 3,
-        company: "Beautycounter",
+		company: "Beautycounter",
+		instock: true,
+        price: 17,
         title: "Overnight Resurfacing Peel",
         img: require("../../Assets/products/overnightPeel5.jpg"),
         url: "/detail/3",
@@ -51,7 +56,8 @@ const ProductsJson = {
     {
         id: 4,
         company: "MNDFL",
-        price: 50,
+		price: 50,
+		instock: false,
         title: "MNDFL Living",
         img: require("../../Assets/products/mdt8_sq.png"),
         url: "/detail/4",
@@ -63,7 +69,8 @@ const ProductsJson = {
     {
         id: 5,
         company: "Beautycounter",
-        price: 125,
+		price: 125,
+		instock: true,
         title: "Pancakes",
         img: require("../../Assets/products/pancakes.jpg"),
         url: "/detail/5",
@@ -73,7 +80,8 @@ const ProductsJson = {
         }     
     },
     {
-        id: 6,
+		id: 6,
+		instock: true,
         company: "Beautycounter",
         price: 125,
         title: "CounterSun",
@@ -88,7 +96,8 @@ const ProductsJson = {
     {
         id: 7,
         company: "MonoPrix",
-        price: 100,
+		price: 100,
+		instock: false,
         title: "Miracle Legumes",
         img: require("../../Assets/products/beans.jpg"),
         url: "/detail/7",
@@ -100,7 +109,8 @@ const ProductsJson = {
     {
         id: 8,
         company: "Beautycounter",
-        price: 125,
+		price: 125,
+		instock: true,
         title: "GoopGlow",
         img: require("../../Assets/products/goopglow.jpg"),
         url: "/detail/8",

@@ -37,7 +37,7 @@ class Checkout extends Component {
 		});
 	}
 
-	getCheckoutDisplay = () => {
+	getCheckoutDisplay = (product) => {
 		if (this.state.checkoutDisplayMode == this.checkoutDisplayModes.creditCard) {
 			return (
 				<div>
@@ -48,12 +48,12 @@ class Checkout extends Component {
 					<input type='text' /><br />
 					CCV:<br />
 					<input type='text' /><br />
-					Name on Card:<br />
+					Zip:<br />
 					<input type="text" /><br />
 					<br />
 					<br />
 					<div>
-						Total: $47<br />
+						Total: ${product.price}<br />
 						<Popup trigger={<button>Complete Purchase</button>} modal>
 							Your purchase is complete.<br />
 							Congratulations!
@@ -71,7 +71,7 @@ class Checkout extends Component {
 					<br />
 					<br />
 					<div>
-						Total: $47<br />
+						Total: ${product.price}<br />
 						<Popup trigger={<button>Use Touch ID</button>} modal>
 							Your purchase is complete.<br />
 							Congratulations!
@@ -106,7 +106,7 @@ class Checkout extends Component {
 				</div>
 				<div>
 					<br />
-					{this.getCheckoutDisplay()}
+					{this.getCheckoutDisplay(product)}
 				</div>
 			</div>
 		);
