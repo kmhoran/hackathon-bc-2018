@@ -71,7 +71,7 @@ class Upcoming extends React.Component {
         return (
             <div>
                 <MainMenu />
-                <div className="launch-date">Aug 13</div>
+                <div className="launch-date">Aug 15</div>
                 {this.products()}
             </div>
         );
