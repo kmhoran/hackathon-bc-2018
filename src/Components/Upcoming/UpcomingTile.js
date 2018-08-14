@@ -29,7 +29,7 @@ class UpcomingTile extends React.Component{
         isHover: false,
     };
 
-    notify = () => toast( 'Product launches in 15 minutes! Dont miss it!!', {autoClose: false});
+    notify = () => toast( 'Product launches in 48 hours! Dont miss it!!', {autoClose: false});
 
     onNotify = () => {
         this.setState(prevSate =>({
@@ -65,12 +65,12 @@ class UpcomingTile extends React.Component{
                       onMouseLeave={this.onUnhover}>
                   <div className="tile-wrapper">
                     <img className="upcoming-tile-img" src={tile.img} />
-                    <div className="tile-title-wrapper">
+                    <div className="wrapper">
                         <strong className="tile-title">
                           {tile.title} 
                         </strong>
                     </div>
-                    <span className="notify-button">
+                    <span className="wrapper-button">
                       {this.displayNotification()}
                     </span>
                   </div>
