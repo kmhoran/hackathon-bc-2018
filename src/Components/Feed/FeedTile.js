@@ -10,6 +10,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 
 import './FeedStyles.css';
+import { Button } from '../../../node_modules/@material-ui/core';
 
 const styles = theme => ({
     icon: {
@@ -25,7 +26,8 @@ class FeedTile extends React.Component {
 
     state = {
         isFavorite: false,
-        isHover: false
+        isHover: false,
+        isClicked: false
     };
 
     onFavorite = () => {
@@ -37,27 +39,54 @@ class FeedTile extends React.Component {
     displayFavorite = () => {
         if (!this.state.isFavorite) {
             return (
-            <IconButton className="feed-tile-icon inactive"
-            onClick={this.onFavorite}>
-            <i className="far fa-heart favorite-icon"></i>
-            </IconButton>);
+                <IconButton className="feed-tile-icon inactive"
+                    onClick={this.onFavorite}>
+                    <i className="far fa-heart favorite-icon"></i>
+                </IconButton>);
         } else {
             return (
                 <IconButton className="feed-tile-icon active"
-                onClick={this.onFavorite}>
-                <i className="fas fa-heart favorite-icon"></i>
+                    onClick={this.onFavorite}>
+                    <i className="fas fa-heart favorite-icon"></i>
                 </IconButton>);
         }
     }
 
     displaySocial = () => {
         return (<IconButton className="feed-tile-icon inactive">
-           <i className="fas fa-share-alt social-icon"></i>
+            <i className="fas fa-share-alt social-icon"></i>
         </IconButton>);
     }
 
     handleImageClick = () => {
-        window.location.href=this.props.tile.url;
+        window.location.href = this.props.tile.url;
+    }
+
+    handleBuy = () => {
+        console.log("Buy")
+    }
+    handleNotify = () => {
+        this.setState({
+        isClicked: true
+        });
+    }
+    displayActionButton = () => {
+         if(this.props.tile.isAvailable){
+             return(<Button className="action-button" 
+             variant="contained" 
+             color="primary"
+             onClick={this.handleBuy}>Buy</Button>)
+         } else if(!this.state.isClicked){
+            return(<Button className="action-button" 
+            variant="contained" 
+            color="secondary"
+            onClick={this.handleNotify}>Notify Me</Button>)
+         } else{
+            return(<Button className="action-button" 
+            variant="contained" 
+            disabled
+            color="primary">Notification Sent!</Button>)
+         }
     }
 
     render() {
@@ -66,20 +95,25 @@ class FeedTile extends React.Component {
             <div className="feed-tile-frame">
                 <GridListTile className="feed-tile" key={tile.id}>
                     <div className="feed-tile-img-frame">
-                        <img className="feed-tile-img" 
-                             src={tile.img} alt={tile.title} 
-                             onClick={this.handleImageClick}/>
+                        <img className="feed-tile-img"
+                            src={tile.img} alt={tile.title}
+                            onClick={this.handleImageClick} />
                         <div className="feed-tile-icon">
-                <div className="tile-icons">
-                {this.displaySocial()}
-                {this.displayFavorite()}
-                </div>
-            </div>
+                            <div className="tile-icons">
+                                {this.displaySocial()}
+                                {this.displayFavorite()}
+                            </div>
+                        </div>
                     </div>
                 </GridListTile>
+                
                 <div className='feed-tile-info'>
-                  <div className='tile-company'>{tile.company}</div>
-                   <div className='tile-title'>{tile.title}</div>
+                <div>
+                    {this.displayActionButton()}
+                </div>
+                <br/>
+                    <div className='tile-company'>{tile.company}</div>
+                    <div className='tile-title'>{tile.title}</div>
                 </div>
             </div>)
     }

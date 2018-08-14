@@ -8,6 +8,7 @@ const ProductsJson = {
             title: "Mineral Sunscreen Mist",
             img: require("../../Assets/products/countersunMineralSunscreenMist_1.jpg"),
             url: "/detail/0",
+            isAvailable: true,
             blog:{
                 title: "Life isn’t as serious as you make it out to be.",
                 content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Enim nunc faucibus a pellentesque. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Vitae turpis massa sed elementum tempus. Integer vitae justo eget magna fermentum iaculis eu non. Enim ut tellus elementum sagittis vitae et leo duis. Odio ut sem nulla pharetra diam sit. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Pharetra pharetra massa massa ultricies mi."
@@ -20,6 +21,7 @@ const ProductsJson = {
         price: 23,
         img: require("../../Assets/products/cup.jpeg"),
         url: "/detail/1",
+        isAvailable: true,
         blog:{
             title: "Life isn’t as serious as you make it out to be.",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Enim nunc faucibus a pellentesque. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Vitae turpis massa sed elementum tempus. Integer vitae justo eget magna fermentum iaculis eu non. Enim ut tellus elementum sagittis vitae et leo duis. Odio ut sem nulla pharetra diam sit. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Pharetra pharetra massa massa ultricies mi."
@@ -27,11 +29,12 @@ const ProductsJson = {
     },
     {
         id: 2,
-        title: "jar",
+        title: "Body Sugar",
         company: "Sur la Table",
         price: 45,
         img: require("../../Assets/products/jar.jpg"),
         url: "/detail/2",
+        isAvailable: true,
         blog:{
             title: "Life isn’t as serious as you make it out to be.",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Enim nunc faucibus a pellentesque. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Vitae turpis massa sed elementum tempus. Integer vitae justo eget magna fermentum iaculis eu non. Enim ut tellus elementum sagittis vitae et leo duis. Odio ut sem nulla pharetra diam sit. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Pharetra pharetra massa massa ultricies mi."
@@ -44,6 +47,7 @@ const ProductsJson = {
         price: 45,
         img: require("../../Assets/products/overnightPeel5.jpg"),
         url: "/detail/3",
+        isAvailable: true,
         blog:{
             title: "Life isn’t as serious as you make it out to be.",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Enim nunc faucibus a pellentesque. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Vitae turpis massa sed elementum tempus. Integer vitae justo eget magna fermentum iaculis eu non. Enim ut tellus elementum sagittis vitae et leo duis. Odio ut sem nulla pharetra diam sit. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Pharetra pharetra massa massa ultricies mi."
@@ -56,6 +60,7 @@ const ProductsJson = {
         title: "MNDFL Living",
         img: require("../../Assets/products/mdt8_sq.png"),
         url: "/detail/4",
+        isAvailable: true,
         blog:{
             title: "Life isn’t as serious as you make it out to be.",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Enim nunc faucibus a pellentesque. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Vitae turpis massa sed elementum tempus. Integer vitae justo eget magna fermentum iaculis eu non. Enim ut tellus elementum sagittis vitae et leo duis. Odio ut sem nulla pharetra diam sit. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Pharetra pharetra massa massa ultricies mi."
@@ -65,9 +70,10 @@ const ProductsJson = {
         id: 5,
         company: "Beautycounter",
         price: 12,
-        title: "Pancakes",
+        title: "Green Pan",
         img: require("../../Assets/products/pancakes.jpg"),
         url: "/detail/5",
+        isAvailable: false,
         blog:{
             title: "Life isn’t as serious as you make it out to be.",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Enim nunc faucibus a pellentesque. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Vitae turpis massa sed elementum tempus. Integer vitae justo eget magna fermentum iaculis eu non. Enim ut tellus elementum sagittis vitae et leo duis. Odio ut sem nulla pharetra diam sit. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Pharetra pharetra massa massa ultricies mi."
@@ -80,6 +86,7 @@ const ProductsJson = {
         title: "CounterSun",
         img: require("../../Assets/products/countersun_1.jpg"),
         url: "/detail/6",
+        isAvailable: false,
         blog:{
             title: "Life isn’t as serious as you make it out to be.",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Enim nunc faucibus a pellentesque. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Vitae turpis massa sed elementum tempus. Integer vitae justo eget magna fermentum iaculis eu non. Enim ut tellus elementum sagittis vitae et leo duis. Odio ut sem nulla pharetra diam sit. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Pharetra pharetra massa massa ultricies mi."
@@ -93,6 +100,7 @@ const ProductsJson = {
         title: "Miracle Legumes",
         img: require("../../Assets/products/beans.jpg"),
         url: "/detail/7",
+        isAvailable: false,
         blog:{
             title: "Life isn’t as serious as you make it out to be.",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Enim nunc faucibus a pellentesque. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Vitae turpis massa sed elementum tempus. Integer vitae justo eget magna fermentum iaculis eu non. Enim ut tellus elementum sagittis vitae et leo duis. Odio ut sem nulla pharetra diam sit. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Pharetra pharetra massa massa ultricies mi."
@@ -105,6 +113,7 @@ const ProductsJson = {
         title: "GoopGlow",
         img: require("../../Assets/products/goopglow_1.jpg"),
         url: "/detail/8",
+        isAvailable: false,
         blog:{
             title: "Life isn’t as serious as you make it out to be.",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Enim nunc faucibus a pellentesque. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Vitae turpis massa sed elementum tempus. Integer vitae justo eget magna fermentum iaculis eu non. Enim ut tellus elementum sagittis vitae et leo duis. Odio ut sem nulla pharetra diam sit. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Pharetra pharetra massa massa ultricies mi."
@@ -117,6 +126,7 @@ const ProductsJson = {
         title: "Local Produce",
         img: require("../../Assets/products/tomatos.jpg"),
         url: "/detail/9",
+        isAvailable: false,
         blog:{
             title: "Life isn’t as serious as you make it out to be.",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Enim nunc faucibus a pellentesque. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Vitae turpis massa sed elementum tempus. Integer vitae justo eget magna fermentum iaculis eu non. Enim ut tellus elementum sagittis vitae et leo duis. Odio ut sem nulla pharetra diam sit. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Pharetra pharetra massa massa ultricies mi."
@@ -129,6 +139,7 @@ const ProductsJson = {
         title: "CounterMan",
         img: require("../../Assets/products/counterman.jpg"),
         url: "/detail/10",
+        isAvailable: false,
         blog:{
             title: "Life isn’t as serious as you make it out to be.",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Enim nunc faucibus a pellentesque. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Vitae turpis massa sed elementum tempus. Integer vitae justo eget magna fermentum iaculis eu non. Enim ut tellus elementum sagittis vitae et leo duis. Odio ut sem nulla pharetra diam sit. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Pharetra pharetra massa massa ultricies mi."
