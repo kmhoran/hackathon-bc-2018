@@ -100,7 +100,6 @@ class FeedTile extends React.Component {
                             onClick={this.handleImageClick} />
                         <div className="feed-tile-icon">
                             <div className="tile-icons">
-                                {this.displaySocial()}
                                 {this.displayFavorite()}
                             </div>
                         </div>
